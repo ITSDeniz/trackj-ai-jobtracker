@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --primary: 199 89% 38%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 174 72% 38%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 199 89% 38%;
+    --radius: 0.5rem;
+    --status-saved: 215 16% 47%;
+    --status-applied: 200 95% 39%;
+    --status-screening: 38 92% 50%;
+    --status-interviewing: 262 80% 50%;
+    --status-offer: 142 76% 36%;
+    --status-rejected: 0 72% 51%;
+    --status-withdrawn: 215 16% 47%;
+    --status-archived: 215 16% 47%;
+    --ai-accent: 245 58% 51%;
+    --ai-accent-foreground: 0 0% 100%;
+  }
+
+  .dark {
+    --background: 222 47% 6%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 10%;
+    --card-foreground: 210 40% 98%;
+    --primary: 199 89% 48%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 222 47% 12%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 222 47% 12%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 174 72% 48%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 199 89% 48%;
+    --status-saved: 215 20% 65%;
+    --status-applied: 200 95% 60%;
+    --status-screening: 38 92% 60%;
+    --status-interviewing: 262 80% 70%;
+    --status-offer: 142 76% 50%;
+    --status-rejected: 0 72% 60%;
+    --status-withdrawn: 215 20% 65%;
+    --status-archived: 215 20% 65%;
+    --ai-accent: 245 58% 65%;
+    --ai-accent-foreground: 210 40% 98%;
+  }
+
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased transition-colors duration-300 ease-in-out;
+    font-family:
+      Inter,
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      sans-serif;
+  }
+
+  /* Smooth layout and text theme transitions */
+  header, aside, main, table, tr, td, button, input, select, textarea, p, span, h1, h2, h3, h4, h5, h6, a, .bg-card, .border-border {
+    @apply transition-colors duration-300 ease-in-out;
+  }
+}
